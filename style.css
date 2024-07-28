@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background-image: url('images/pattern-curve.svg');
+    background-repeat: no-repeat;      
+    background-position: left bottom;
+
+    font-family: 'Inter';
+    font-size: 32px;
+    color: hsl(240, 38%, 20%);
+    font-weight: 300;
+    height: 100vh;   
+
+    display: flex;     
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;    
+}
+
+.content-conteiner{     
+    background-image: url('images/pattern-bg.svg');
+    background-repeat: no-repeat;    
+    background-position: bottom 4.5rem right ;
+
+    padding: 5.9rem;
+    margin: 5rem;
+    max-width: 80rem;
+}
+
+.section.active{  
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.section{
+    display: none;
+}
+
+
+.description{
+    background-image: url('images/pattern-quotes.svg');
+    background-repeat: no-repeat;
+    background-position: top 0 left 6rem;    
+    padding-top: 4rem;     
+    z-index: 1;
+    display: flex;
+    flex-direction: column;    
+}
+
+.testimonial{
+    width: 115%;    
+}
+
+.data{
+    margin-top: 2rem;
+    font-size: 0.75em;
+    display: flex;
+    gap: 1rem;
+}
+
+.position{
+    color: hsl(240, 18%, 77%);
+}
+
+.name{
+    font-weight: 700;
+}
+
+.photo.conteiner img.photo{
+    display: block;
+    margin:  2rem 0; 
+    box-shadow: 15px 40px 30px hsla(240, 18%, 77%, 0.2);  
+}
+
+.photo.conteiner{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.buttons {
+    display: flex;    
+    background-color: white;
+    gap: 1.5rem;
+    padding: 1rem;
+    width: max-content;
+    border-radius: 30px;  
+
+    position: absolute;
+    z-index: 2;  
+    bottom: 0.5rem;
+    left: 5rem;
+    box-shadow: 0px 10px 20px hsla(240, 18%, 77%, 0.3);
+}
+
+.btn img{
+    display: block;
+}
+
+.btn{    
+    border: none;
+    background-color: transparent;   
+    cursor: pointer; 
+}
+
+@media (max-width: 1150px) {
+    body{
+        font-size: 20px;
+    }
+
+    .content-conteiner{  
+        background-image: none;      
+       
+        padding: 5vw;
+        margin: 5vw;          
+        width: 95vw;
+    }
+
+    .section{    
+        flex-direction: column;          
+    }
+
+    .photo.conteiner{
+        order: -1;
+        padding: 10%;        
+        background-image: url('images/pattern-bg.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .buttons {   
+        bottom: 10%;
+        left: 37%; 
+        
+        justify-content: space-between; 
+        border-radius: 50px;  
+    }
+    
+    .description{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-position: top 0 left 45%; 
+        background-size: 20%;    
+        padding-top: 10%;    
+    }
+
+    .photo.conteiner img.photo{
+        width: 70vw;        
+    }
+
+    .testimonial{
+       width: 90%;  
+    }
+
+    .data{
+        flex-direction: column;
+    }
+
+
+}
